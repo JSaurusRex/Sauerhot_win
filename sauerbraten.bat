@@ -36,4 +36,4 @@ IF %major_version% GTR 10 (
 )
 set SAUER_BIN=bin64
 
-start %SAUER_BIN%\sauerbraten.exe "-q$HOME\My Games\Sauerbraten" -glog.txt %*
+start bin64\sauerbraten.exe "-q$HOME\My Games\Sauerbraten" -glog.txt %*

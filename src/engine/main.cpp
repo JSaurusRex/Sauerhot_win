@@ -1229,7 +1229,7 @@ int main(int argc, char **argv)
         if(!multiplayer(false) && curtime>200) curtime = 200;
         if(game::ispaused()) curtime = 0;
 
-        if(playervel + 2 < abs(player->vel.x ) + abs(player->vel.y) || playervel < 5) curtime = curtime / 5 < 1 ? 1 : curtime / 5;
+        if(!multiplayer(false) && playervel + 2 < abs(player->vel.x ) + abs(player->vel.y) || playervel < 5) curtime = curtime / 5 < 1 ? 1 : curtime / 5;
         playervel = abs(player->vel.x) + abs(player->vel.y);
 
 		lastmillis += curtime;
